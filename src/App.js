@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
 import firebase from 'firebase';
 
+import Home from './Home';
 
-export default class App extends Component {
+class App extends Component {
   componentWillMount() {
     let config = {
         apiKey: "AIzaSyAoG_xN1WtSQ8Dam9Fw-0_ZFZqr7P34bT4",
@@ -18,23 +18,9 @@ export default class App extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Redux</Text>
-      </View>
+      <Home />
     );
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-});
+export default App;
